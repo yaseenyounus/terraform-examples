@@ -1,4 +1,4 @@
-# Terraform AWS Static Site
+# Terraform + AWS - Host a Static Site With S3 and CloudFront
 
 ## Overview
 
