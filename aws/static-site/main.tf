@@ -1,6 +1,6 @@
 # Assigns local values for use
 locals {
-  account_id = data.aws_caller_identity.aws_account.account_id
+  account_id = data.aws_caller_identity.current.account_id
   content_types = {
     ".html" = "text/html",
     ".css"  = "text/css",
