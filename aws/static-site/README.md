@@ -8,6 +8,11 @@ This Terraform AWS code samples demonstrates how to configure and deploy a stati
 
 When working with static sites, it's more efficient to host the assets in an S3 Bucket, rather than a server or container that is always running. To achieve this, we store the assets in an S3 Bucket, and create a CloudFront Distribution that uses the S3 Bucket as its origin to retrieve, serve, and cache content.
 
+## Requirements
+
+- [Terraform v1.4.6](https://developer.hashicorp.com/terraform/downloads)
+- AWS Account
+
 ## AWS Services Utilized
 
 - CloudFront
@@ -30,6 +35,7 @@ After successful deployment, Terraform will output:
 - CloudFront Distribution Endpoint
 
 ## Testing
+
 - To test that the static site is running, we can use either the CloudFront Distribution endpoint.
 - The static site contains two files: `/index.html` and `/error.html`.
-    - `/index.html` is served whenever you visit the root path or `/index.html`.
+  - `/index.html` is served whenever you visit the root path or `/index.html`.
