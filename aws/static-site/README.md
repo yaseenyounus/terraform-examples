@@ -2,11 +2,11 @@
 
 ## Overview
 
-This Terraform AWS code samples demonstrates how to configure and deploy a static site using S3 and CloudFront.
+This Terraform AWS code sample demonstrates how to configure and deploy a static site using Simple Storage Service (S3) and CloudFront.
 
 ## Real-world Example
 
-When working with static sites, it's more efficient to host the assets in an S3 Bucket, rather than a server or container that is always running. To achieve this, we store the assets in an S3 Bucket, and create a CloudFront Distribution that uses the S3 Bucket as its origin to retrieve, serve, and cache content.
+When working with static sites, it's more efficient to host the assets in S3 buckets, rather than a server or container that's always running. To achieve this, we store the assets in an S3 bucket, and create a CloudFront Distribution that uses the S3 bucket as its origin to retrieve, serve, and cache content.
 
 ## Requirements
 
