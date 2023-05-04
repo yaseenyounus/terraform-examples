@@ -22,7 +22,14 @@ When working with static sites, it's more efficient to host the assets in an S3 
 
 - Authenticate to an AWS account via a Command Line Interface (CLI).
 - Navigate to this `aws/static-site` directory.
-- In the `backend.tf` file, change the bucket name to something unique. This S3 bucket will contain the [remote Terraform state](https://developer.hashicorp.com/terraform/language/settings/backends/s3). Otherwise for local state, comment the contents of `backend.tf` out.
+- Do you want to use [Terraform Remote State](https://developer.hashicorp.com/terraform/language/state/remote)?
+  - YES
+    - [Create a new S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html) using the AWS CLI or console:
+      - CLI: `aws s3 mb s3://unique-bucket-name-tf-state`
+      - Console: AWS &#8594; S3 &#8594; `Create bucket` &#8594; Fill in required fields &#8594; `Create bucket`
+    - In the `backend.tf` file, update the bucket name to the bucket you created. This S3 bucket will contain the [remote Terraform state](https://developer.hashicorp.com/terraform/language/settings/backends/s3).
+  - NO 
+    - Comment the contents of `backend.tf` out and proceed
 - `terraform init` to initialize and prepare the Terraform directory.
 - `terraform validate` to check if the Terraform configuration is valid.
 - `terraform plan` to preview the actions that Terraform will perform.
