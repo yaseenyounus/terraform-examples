@@ -17,8 +17,16 @@ To use the Terraform code examples in this repository, you will need to have the
 
 To get started, simply clone this repository to your local machine:
 
+HTTPS
+
 ```
 git clone https://github.com/yaseenyounus/terraform-examples.git
+```
+
+SSH
+
+```
+git clone git@github.com:yaseenyounus/terraform-examples.git
 ```
 
 Once you have cloned the repository, you can browse through the code examples in the repository's directories. Each directory contains a separate example with its own README file explaining the code.
